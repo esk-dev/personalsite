@@ -1,9 +1,8 @@
 import { Box, Container, Heading, chakra, Button } from "@chakra-ui/react";
 import Link from "next/link"
-import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/page";
-import CustomButton from "../components/button";
+import Section from "../components/section";
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
@@ -23,7 +22,7 @@ export default function Home() {
             gap="5px"
             flexGrow={1}
           >
-            <Heading as="h2" variant="page-title">
+            <Heading as="h2" >
               Egor Skorokhodov
             </Heading>
             <p>Frontend web-developer</p>
@@ -57,6 +56,24 @@ export default function Home() {
             />
           </Box>
         </Box>
+
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title">
+            Work
+          </Heading>
+        </Section>
+
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            Bio
+          </Heading>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Get in touch
+          </Heading>
+        </Section>
       </Container>
     </Layout>
   );

@@ -13,11 +13,13 @@ import ThemeToggle from "./themetoggle";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue("gray.200", "whiteAlpha.900");
+  // const inactiveColor = useColorModeValue("black", "white");
 
   return (
     <Link
       p={2}
+      // bg={active ? "light" : undefined}
+      color={active ? "light" : undefined}
       href={href}
       passHref={true}
       target={target}

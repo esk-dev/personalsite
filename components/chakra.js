@@ -3,7 +3,7 @@ import theme from '../lib/theme';
 
 export default function Chakra({children}) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme} cssVarsRoot="body">
       {children}
     </ChakraProvider>
   )

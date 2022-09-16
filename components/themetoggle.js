@@ -9,7 +9,7 @@ export default function ThemeToggle() {
       size='sm'
       onClick={toggleColorMode}
       icon={useColorModeValue(<MoonIcon />, <SunIcon/>)}
-      colorScheme={useColorModeValue('blue', 'teal')}
+      colorScheme={useColorModeValue('blackAlpha', 'teal')}
     ></IconButton>
   );
 }
