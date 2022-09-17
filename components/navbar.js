@@ -54,7 +54,7 @@ export default function NavBar(props) {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>Works</LinkItem>
-          <LinkItem href="/contact" path={path}>Contact</LinkItem>
+          <LinkItem href="/resume" path={path}>Resume</LinkItem>
           <LinkItem target="_blank" href="https://github.com/esk98" path={path} display="inline-flex" alignItems="center" style={{gap: 4}} pl={2}>
             <IoLogoGithub />
             Source
@@ -78,8 +78,8 @@ export default function NavBar(props) {
                 <Link href="/works">
                   <MenuItem as={Link}>Works</MenuItem>
                 </Link>
-                <Link href="/contact">
-                  <MenuItem as={Link}>Contacts</MenuItem>
+                <Link href="/resume">
+                  <MenuItem as={Link}>Resume</MenuItem>
                 </Link>
               </MenuList>
             </Menu>
