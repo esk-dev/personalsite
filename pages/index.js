@@ -1,11 +1,22 @@
-import { Box, Container, Heading, chakra, Button } from "@chakra-ui/react";
-import { EmailIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Container,
+  Heading,
+  chakra,
+  Button,
+  List,
+  ListItem,
+  IconButton,
+} from "@chakra-ui/react";
+import { ArrowRightIcon, EmailIcon } from "@chakra-ui/icons";
+import { IoLogoGithub } from "react-icons/io5";
+import Habr from "../public/habr.png";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Page from "../components/page";
 import Section from "../components/section";
 import MotionBox from "../components/MotionBox";
+import Paragraph from "../components/paragraph";
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
@@ -38,13 +49,14 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <p>Frontend web-developer</p>
+              <p>JavaScript / Html / CSS / Angular</p>
             </MotionBox>
             <Link href="/contacts">
               <Button
                 size="sm"
                 variant="outline"
                 letterSpacing="widest"
-                colorScheme="teal"
+                colorScheme="blue"
                 rightIcon={<EmailIcon />}
               >
                 CONTACT
@@ -54,7 +66,7 @@ export default function Home() {
           <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
-            birderStyle="solid"
+            borderStyle="solid"
             w="100px"
             h="100px"
             display="inline-block"
@@ -75,6 +87,28 @@ export default function Home() {
           <Heading as="h3" variant="section-title">
             Work
           </Heading>
+          <Paragraph>
+            My interest in web development started in 2021 when I decided try to
+            make the site as a final project - creating several pages taught me
+            a lot about HTML and CSS! I also found out that JS has more serious
+            possibilities than page animation. So I started learning web
+            development. Fast forward to today, I had the experience of an
+            internship in the department web development at Yota, where I got
+            acquainted with the framework Angular and more seriously delved into
+            the creation of the web. From projects made there, I can highlight
+            the creation of a landing using Angular Material.
+          </Paragraph>
+          <Box align="center" my={6}>
+            <Link href="/works" passHref scroll={false}>
+              <Button
+                rightIcon={<ArrowRightIcon />}
+                variant="outline"
+                colorScheme="blue"
+              >
+                My portfolio
+              </Button>
+            </Link>
+          </Box>
         </Section>
 
         <Section delay={0.3}>
@@ -83,10 +117,57 @@ export default function Home() {
           </Heading>
         </Section>
 
-        <Section delay={0.4}>
+        <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
             Get in touch
           </Heading>
+
+          <List>
+            <ListItem>
+              <Link
+                href="https://github.com/esk98"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button size="md" variant="ghost" colorScheme="blue">
+                  Github
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://career.habr.com/egorsk12"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button size="md" variant="ghost" colorScheme="blue">
+                  HabrCareer
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://career.habr.com/egorsk12"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button size="md" variant="ghost" colorScheme="blue">
+                  HeadHunter
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https:t.me/tgreddyay"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button size="md" variant="ghost" colorScheme="blue">
+                  Telegram
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
         </Section>
       </Container>
     </Page>

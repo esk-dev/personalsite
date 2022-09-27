@@ -33,12 +33,13 @@ export default function NavBar(props) {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        w="100%"
+        maxWidth='1440'
         flexWrap="wrap"
         alignContent="center"
         justifyContent="space-between"
       >
-        <Flex alignContent="center" mr={5} alignItems="center">
+        <Flex alignContent="center" alignItems="center">
           <Heading as="h1" size="md" letterSpacing={"tighter"}>
             <LinkItem href="/">Egor ESk</LinkItem>
           </Heading>
@@ -54,13 +55,13 @@ export default function NavBar(props) {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>Works</LinkItem>
-          <LinkItem href="/resume" path={path}>Resume</LinkItem>
+          <LinkItem href="/resume.pdf" target="_blank" rel="noreferrer">Resume</LinkItem>
           <LinkItem target="_blank" href="https://github.com/esk98" path={path} display="inline-flex" alignItems="center" style={{gap: 4}} pl={2}>
             <IoLogoGithub />
             Source
           </LinkItem>
         </Stack>
-        <Box flex={1} align="right">
+        <Box display='flex' alignItems="center" align="right">
           <ThemeToggle />
 
           <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
@@ -73,12 +74,12 @@ export default function NavBar(props) {
               />
               <MenuList>
                 <Link href="/">
-                  <MenuItem as={Link}>About</MenuItem>
+                  <MenuItem as={Link}>Home</MenuItem>
                 </Link>
                 <Link href="/works">
                   <MenuItem as={Link}>Works</MenuItem>
                 </Link>
-                <Link href="/resume">
+                <Link href="/resume.pdf" target="_blank" rel="noreferrer" >
                   <MenuItem as={Link}>Resume</MenuItem>
                 </Link>
               </MenuList>

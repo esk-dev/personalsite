@@ -18,7 +18,6 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
     <Link
       p={2}
       href={href}
-      passHref={true}
       target={target}
       {...props}
     >

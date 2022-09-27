@@ -12,7 +12,6 @@ const Page = ({ children, title }) => {
         </Head>
       )}
       {children}
-      <GridItem />
     </>
   );
 };
