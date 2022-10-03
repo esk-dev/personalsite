@@ -12,12 +12,12 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  IconButton
+  IconButton,
 } from "@chakra-ui/react";
 import ThemeToggle from "./themetoggle";
 import { NextLink } from "next/link";
 import { IoLogoGithub, IoPerson } from "react-icons/io5";
-import LinkItem from './linkitem'
+import LinkItem from "./linkitem";
 import { HamburgerIcon } from "@chakra-ui/icons";
 export default function NavBar(props) {
   const { path } = props;
@@ -34,7 +34,7 @@ export default function NavBar(props) {
         display="flex"
         p={2}
         w="100%"
-        maxWidth='1440'
+        maxWidth="1440"
         flexWrap="wrap"
         alignContent="center"
         justifyContent="space-between"
@@ -54,20 +54,32 @@ export default function NavBar(props) {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>Works</LinkItem>
-          <LinkItem href="/resume.pdf" target="_blank" rel="noreferrer">Resume</LinkItem>
-          <LinkItem target="_blank" href="https://github.com/esk98" path={path} display="inline-flex" alignItems="center" style={{gap: 4}} pl={2}>
+          <LinkItem href="/works" path={path}>
+            Works
+          </LinkItem>
+          <LinkItem href="/resume.pdf" target="_blank" rel="noreferrer">
+            Resume
+          </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://github.com/esk98"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
             <IoLogoGithub />
             Source
           </LinkItem>
         </Stack>
-        <Box display='flex' alignItems="center" align="right">
+        <Box display="flex" alignItems="center" align="right">
           <ThemeToggle />
 
-          <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
-                size='sm'
+                size="sm"
                 as={IconButton}
                 icon={<HamburgerIcon />}
                 variant="outline"
@@ -79,7 +91,7 @@ export default function NavBar(props) {
                 <Link href="/works">
                   <MenuItem as={Link}>Works</MenuItem>
                 </Link>
-                <Link href="/resume.pdf" target="_blank" rel="noreferrer" >
+                <Link href="/resume.pdf" target="_blank" rel="noreferrer">
                   <MenuItem as={Link}>Resume</MenuItem>
                 </Link>
               </MenuList>

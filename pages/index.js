@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { ArrowRightIcon, EmailIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
-import Habr from "../public/habr.png";
 import Link from "next/link";
 import Image from "next/image";
 import Page from "../components/page";
