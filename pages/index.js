@@ -6,25 +6,22 @@ import {
   Button,
   List,
   ListItem,
-  useDisclosure
+  useDisclosure,
 } from '@chakra-ui/react';
 import { ArrowRightIcon, EmailIcon } from '@chakra-ui/icons';
-import { IoLogoGithub } from 'react-icons/io5';
-import Habr from '../public/habr.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import Page from '../components/page';
 import Section from '../components/section';
 import MotionBox from '../components/MotionBox';
 import Paragraph from '../components/paragraph';
-import ModalFormDialog from '../components/modalformdialog';
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
 });
 
 export default function Home() {
-  const {isOpen, onOpen, onClose} = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Page>
       <Container>
@@ -56,6 +53,7 @@ export default function Home() {
               <p>JavaScript / Html / CSS / Angular</p>
               <Button
                 onClick={onOpen}
+                mt={1}
                 size="sm"
                 variant="outline"
                 letterSpacing="widest"
@@ -66,7 +64,6 @@ export default function Home() {
               </Button>
             </MotionBox>
           </Box>
-          <ModalFormDialog isOpen={isOpen} onClose={onClose} />
           <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
