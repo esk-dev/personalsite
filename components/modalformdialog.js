@@ -6,9 +6,13 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Button
 } from '@chakra-ui/react';
-import { Form } from './form';
+import Form from './form';
 export default function ModalFormDialog(props) {
+
+  const { isOpen, onClose } = props;
+
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -18,6 +22,12 @@ export default function ModalFormDialog(props) {
         <ModalBody>
           <Form />
         </ModalBody>
+        <ModalFooter>
+          <Button colorScheme="blue" mr={3} onClick={onClose}>
+            Close
+          </Button>
+          <Button variant="ghost">Secondary Action</Button>
+        </ModalFooter>
       </ModalContent>
     </Modal>
   );

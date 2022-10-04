@@ -15,7 +15,7 @@ import Page from '../components/page';
 import Section from '../components/section';
 import MotionBox from '../components/MotionBox';
 import Paragraph from '../components/paragraph';
-
+import ModalFormDialog from '../components/modalformdialog';
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
 });
@@ -64,6 +64,7 @@ export default function Home() {
               </Button>
             </MotionBox>
           </Box>
+          <ModalFormDialog isOpen={isOpen} onClose={onClose} />
           <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
