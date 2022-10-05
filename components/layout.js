@@ -17,14 +17,6 @@ const Layout = ({ children, router }) => {
         {children}
         <Footer />
       </Container>
-      {/* <Show above="md">
-        <MotionBox
-          animate={{ y: [-250, -260] }}
-          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-        >
-          <SideBar path={router.asPath}></SideBar>
-        </MotionBox>
-      </Show> */}
     </Box>
   );
 };

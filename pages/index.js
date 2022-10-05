@@ -6,20 +6,22 @@ import {
   Button,
   List,
   ListItem,
-  IconButton,
-} from "@chakra-ui/react";
-import { ArrowRightIcon, EmailIcon } from "@chakra-ui/icons";
-import { IoLogoGithub } from "react-icons/io5";
-import Link from "next/link";
-import Image from "next/image";
-import Page from "../components/page";
-import Section from "../components/section";
-import MotionBox from "../components/MotionBox";
-import Paragraph from "../components/paragraph";
+  useDisclosure,
+} from '@chakra-ui/react';
+import { ArrowRightIcon, EmailIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
+import Image from 'next/image';
+import Page from '../components/page';
+import Section from '../components/section';
+import MotionBox from '../components/MotionBox';
+import Paragraph from '../components/paragraph';
+import ModalFormDialog from '../components/modalformdialog';
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
+  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
 });
+
 export default function Home() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Page>
       <Container>
@@ -27,7 +29,7 @@ export default function Home() {
           Hello, I&apos;m junior web developer!
         </Box>
 
-        <Box display="flex" alignItems="center">
+        <Box tabIndex={-1} display="flex" alignItems="center">
           <Box
             display="flex"
             alignItems="flex-start"
@@ -49,9 +51,9 @@ export default function Home() {
             >
               <p>Frontend web-developer</p>
               <p>JavaScript / Html / CSS / Angular</p>
-            </MotionBox>
-            <Link href="/contacts">
               <Button
+                onClick={onOpen}
+                mt={1}
                 size="sm"
                 variant="outline"
                 letterSpacing="widest"
@@ -60,8 +62,9 @@ export default function Home() {
               >
                 CONTACT
               </Button>
-            </Link>
+            </MotionBox>
           </Box>
+          <ModalFormDialog isOpen={isOpen} onClose={onClose} />
           <Box
             borderColor="whiteAlpha.800"
             borderWidth={2}
