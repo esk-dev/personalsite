@@ -26,6 +26,15 @@ const FormField = ({ label, ...props }) => {
 const ModalForm = forwardRef((props, ref) => {
   const formikRef = useRef();
 
+  async function postForm(values) {
+    await fetch("/api/postdata", {
+      method: "POST",
+      body: JSON.stringify(values, null, 4),
+    })
+    .then(response => response.json())
+    .then(result => console.log(result))
+    .catch(error => console.error(error))
+  };
   const triggerSubmit = () => {
     if (formikRef.current) {
       formikRef.current.handleSubmit();
@@ -54,6 +63,7 @@ const ModalForm = forwardRef((props, ref) => {
         message: Yup.string().required("Please, print some message"),
       })}
       onSubmit={(values, actions) => {
+        postForm(values);
         console.log(values);
         actions.resetForm();
       }}
