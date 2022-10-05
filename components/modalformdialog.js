@@ -6,13 +6,18 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button
-} from '@chakra-ui/react';
-import Form from './form';
+  Button,
+} from "@chakra-ui/react";
+import ModalForm from "./form";
+import { useRef } from "react";
 export default function ModalFormDialog(props) {
-
   const { isOpen, onClose } = props;
 
+  const formRef = useRef(null);
+
+  const handleSubmit = () => {
+    formRef.current.triggerSubmit();
+  }
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -20,13 +25,13 @@ export default function ModalFormDialog(props) {
         <ModalHeader>Contact me</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Form />
+          <ModalForm ref={formRef}/>
         </ModalBody>
         <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
+          <Button colorScheme="blue" variant="ghost" mr={3} onClick={onClose}>
             Close
           </Button>
-          <Button variant="ghost">Secondary Action</Button>
+          <Button colorScheme="blue" onClick={handleSubmit} >Send</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
