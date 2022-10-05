@@ -4,9 +4,9 @@ import {
   Input,
   Textarea,
   FormErrorMessage,
-  Button,
 } from "@chakra-ui/react";
-import { Formik, Field, useField, Form, useFormikContext } from "formik";
+import { useToast } from '@chakra-ui/toast'
+import { Formik, Field, useField, Form } from "formik";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import * as Yup from "yup";
 
@@ -25,16 +25,42 @@ const FormField = ({ label, ...props }) => {
 // eslint-disable-next-line react/display-name
 const ModalForm = forwardRef((props, ref) => {
   const formikRef = useRef();
+  const toast = useToast();
+  const id = useRef(null);
 
-  async function postForm(values) {
+  const successToast = (title) => {
+    id.current = toast({
+      title: title,
+      status: 'success',
+      isClosable: true,
+    });
+  };
+
+  const errorToast = (title) => {
+    toast.update(
+      id.current, {
+        title: title,
+        status: 'error',
+      }
+    )
+  }
+
+  async function postForm(values, actions) {
     await fetch("/api/postdata", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(values, null, 4),
     })
-    .then(response => response.json())
-    .then(result => console.log(result))
-    .catch(error => console.error(error))
-  };
+      .then((response) => response.json())
+      .then((result) => {
+        successToast(result.message), actions.resetForm();
+      })
+      .catch((error) => {
+        errorToast(error.message);
+      });
+  }
   const triggerSubmit = () => {
     if (formikRef.current) {
       formikRef.current.handleSubmit();
@@ -63,9 +89,8 @@ const ModalForm = forwardRef((props, ref) => {
         message: Yup.string().required("Please, print some message"),
       })}
       onSubmit={(values, actions) => {
-        postForm(values);
+        postForm(values, actions);
         console.log(values);
-        actions.resetForm();
       }}
     >
       {(formik) => (

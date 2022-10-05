@@ -1,10 +1,12 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from '../lib/theme';
+import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
+import theme from "../lib/theme";
 
-export default function Chakra({children}) {
+export default function Chakra({ children }) {
   return (
-    <ChakraProvider theme={theme} cssVarsRoot="body">
-      {children}
-    </ChakraProvider>
-  )
+    <ColorModeProvider>
+      <ChakraProvider theme={theme} cssVarsRoot="body">
+        {children}
+      </ChakraProvider>
+    </ColorModeProvider>
+  );
 }
