@@ -13,7 +13,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Page from '../components/page';
 import Section from '../components/section';
-import MotionBox from '../components/MotionBox';
+import MotionBox from '../components/motionbox';
 import Paragraph from '../components/paragraph';
 import ModalFormDialog from '../components/modalformdialog';
 const ProfileImage = chakra(Image, {
@@ -54,13 +54,11 @@ export default function Home() {
               <Button
                 onClick={onOpen}
                 mt={1}
-                size="sm"
                 variant="outline"
-                letterSpacing="widest"
                 colorScheme="blue"
-                rightIcon={<EmailIcon />}
+                leftIcon={<EmailIcon />}
               >
-                CONTACT
+                Contact
               </Button>
             </MotionBox>
           </Box>

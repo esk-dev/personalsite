@@ -1,26 +1,8 @@
-import {
-  Stack,
-  Box,
-  useColorModeValue,
-  Link,
-  Container,
-  Center,
-  Wrap,
-  Heading,
-  Flex,
-} from "@chakra-ui/react";
-import ThemeToggle from "./themetoggle";
+import { Link } from "@chakra-ui/react";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
-  const active = path === href;
-
   return (
-    <Link
-      p={2}
-      href={href}
-      target={target}
-      {...props}
-    >
+    <Link p={2} href={href} target={target} {...props}>
       {children}
     </Link>
   );

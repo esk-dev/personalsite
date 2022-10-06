@@ -29,10 +29,10 @@ export const Work = ({ children, title, image, href, id }) => {
       <Link href={href}>
         <Button
           mt={2}
-          size="sm"
-          rightIcon={<IoLogoGithub />}
+          size="md"
+          leftIcon={<IoLogoGithub />}
           variant="outline"
-          colorScheme={Color}
+          colorScheme="blue"
         >
           Source
         </Button>

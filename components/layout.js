@@ -1,10 +1,8 @@
-import { Box, Container, Show } from "@chakra-ui/react";
-import MotionBox from "./MotionBox";
+import { Box, Container } from "@chakra-ui/react";
 import Footer from "./footer";
 import NavBar from "./navbar";
-import LinkItem from "./linkitem";
 import Head from "next/head";
-import SideBar from "./sidebar";
+
 const Layout = ({ children, router }) => {
   return (
     <Box minH="100%" as="Main">
