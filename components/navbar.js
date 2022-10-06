@@ -36,8 +36,10 @@ export default function NavBar(props) {
         justifyContent="space-between"
       >
         <Flex alignContent="center" alignItems="center">
-          <Heading as="h1" size="md" letterSpacing={"tighter"}>
-            <LinkItem href="/">Egor ESk</LinkItem>
+          <Heading as="h1" size="md" letterSpacing="tighter">
+            <Link p={4} href="/">
+              Egor ESk
+            </Link>
           </Heading>
         </Flex>
 

@@ -5,10 +5,10 @@ export default function ThemeToggle() {
 
   return (
     <IconButton
-      size='sm'
+      size="sm"
       onClick={toggleColorMode}
-      icon={useColorModeValue(<MoonIcon />, <SunIcon/>)}
-      colorScheme={useColorModeValue('blackAlpha', 'teal')}
+      icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+      colorScheme={useColorModeValue("blackAlpha", "cyan")}
     ></IconButton>
   );
 }
