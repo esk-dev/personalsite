@@ -1,4 +1,3 @@
-import { GridItem } from "@chakra-ui/react";
 import Head from "next/head";
 
 const Page = ({ children, title }) => {

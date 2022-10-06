@@ -1,11 +1,8 @@
 import {
   Stack,
   Box,
-  useColorModeValue,
   Link,
   Container,
-  Center,
-  Wrap,
   Menu,
   Heading,
   Flex,
@@ -15,8 +12,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import ThemeToggle from "./themetoggle";
-import { NextLink } from "next/link";
-import { IoLogoGithub, IoPerson } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io5";
 import LinkItem from "./linkitem";
 import { HamburgerIcon } from "@chakra-ui/icons";
 export default function NavBar(props) {
