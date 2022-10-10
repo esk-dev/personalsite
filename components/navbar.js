@@ -30,14 +30,21 @@ export default function NavBar(props) {
         display="flex"
         p={2}
         w="100%"
-        maxWidth="1440"
+        maxWidth="container.md"
         flexWrap="wrap"
         alignContent="center"
         justifyContent="space-between"
       >
         <Flex alignContent="center" alignItems="center">
-          <Heading as="h1" size="md" letterSpacing={"tighter"}>
-            <LinkItem href="/">Egor ESk</LinkItem>
+          <Heading
+            as="h1"
+            size="md"
+            variant="logo-title"
+            // letterSpacing="tighter"
+          >
+            <Link p={4} href="/">
+              Egor ES
+            </Link>
           </Heading>
         </Flex>
 
