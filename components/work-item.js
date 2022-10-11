@@ -16,7 +16,7 @@ export const Work = ({ children, title, image, href, id }) => {
     <Box w="100%" textAlign="center">
       <Link href={`/works/${id}`} scroll={false}>
         <LinkBox cursor="pointer">
-          <Image borderRadius={12} src={image} alt={title} />
+          <Image borderRadius={12} src={image} alt={title} load="lazy" />
           <LinkOverlay href={`/works/${id}`}>
             <Text mt={2} fontSize={20}>
               {title}
@@ -26,14 +26,8 @@ export const Work = ({ children, title, image, href, id }) => {
         </LinkBox>
       </Link>
 
-      <Link href={href}>
-        <Button
-          mt={2}
-          size="md"
-          leftIcon={<IoLogoGithub />}
-          variant="outline"
-          colorScheme="blue"
-        >
+      <Link href={href} target="_blank">
+        <Button mt={2} size="md" leftIcon={<IoLogoGithub />} colorScheme="cyan">
           Source
         </Button>
       </Link>

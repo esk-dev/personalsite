@@ -4,24 +4,27 @@ import {
   Heading,
   chakra,
   Button,
+  Link,
   List,
   ListItem,
   useDisclosure,
-} from '@chakra-ui/react';
-import { ArrowRightIcon, EmailIcon } from '@chakra-ui/icons';
-import Link from 'next/link';
-import Image from 'next/image';
-import Page from '../components/page';
-import Section from '../components/section';
-import MotionBox from '../components/motionbox';
-import Paragraph from '../components/paragraph';
-import ModalFormDialog from '../components/modalformdialog';
+  Badge,
+} from "@chakra-ui/react";
+import { ArrowRightIcon, EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import Page from "../components/page";
+import Section from "../components/section";
+import MotionBox from "../components/motionbox";
+import Paragraph from "../components/paragraph";
+import ModalFormDialog from "../components/modalformdialog";
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
+  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
 export default function Home() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const router = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Page>
       <Container>
@@ -50,12 +53,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <p>Frontend web-developer</p>
-              <p>JavaScript / Html / CSS / Angular</p>
+              <p>JavaScript / Angular</p>
               <Button
                 onClick={onOpen}
                 mt={1}
-                variant="outline"
-                colorScheme="blue"
+                colorScheme="cyan"
                 leftIcon={<EmailIcon />}
               >
                 Contact
@@ -67,8 +69,8 @@ export default function Home() {
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            mw="100px"
+            mh="100px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
@@ -99,22 +101,14 @@ export default function Home() {
             the creation of a landing using Angular Material.
           </Paragraph>
           <Box align="center" my={6}>
-            <Link href="/works" passHref scroll={false}>
-              <Button
-                rightIcon={<ArrowRightIcon />}
-                variant="outline"
-                colorScheme="blue"
-              >
-                My portfolio
-              </Button>
-            </Link>
+            <Button
+              onClick={() => router.push("/works")}
+              rightIcon={<ArrowRightIcon />}
+              colorScheme="cyan"
+            >
+              My portfolio
+            </Button>
           </Box>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            Bio
-          </Heading>
         </Section>
 
         <Section delay={0.3}>
@@ -122,49 +116,37 @@ export default function Home() {
             Get in touch
           </Heading>
 
-          <List>
-            <ListItem>
-              <Link
-                href="https://github.com/esk98"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  Github
-                </Button>
+          <List
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+          >
+            <ListItem mb="5px">
+              <Link href="https://github.com/esk-dev" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
+                  GitHub <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                href="https://career.habr.com/egorsk12"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  HabrCareer
-                </Button>
+            <ListItem mb="5px">
+              <Link href="https://clck.ru/32KKZs" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
+                  HeadHunter <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                href="https://career.habr.com/egorsk12"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  HeadHunter
-                </Button>
+            <ListItem mb="5px">
+              <Link href="https://career.habr.com/egoresk" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
+                  HabrCareer <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                href="https:t.me/tgreddyay"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  Telegram
-                </Button>
+            <ListItem mb="5px">
+              <Link href="https://t.me/tgreddyay" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
+                  Telegram <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
           </List>

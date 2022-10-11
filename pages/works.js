@@ -1,7 +1,7 @@
 import Section from "../components/section";
 import { Button, Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import Page from "../components/page";
-import {Work} from "../components/work-item";
+import { Work } from "../components/work-item";
 
 export default function Works() {
   return (
@@ -15,44 +15,11 @@ export default function Works() {
           <Section delay={0}>
             <Work
               title="ngForecast"
-              image="/ngforecast.webp"
-              href="https://ngforecastapp.herokuapp.com"
+              image="/ngimage.webp"
+              href="https://github.com/esk-dev/ngforecast"
               id="ngforecast"
             >
-              Lorem ipsum edfsdfsdfsdfsdf
-            </Work>
-          </Section>
-
-          <Section delay={0}>
-            <Work
-              title="ngForecast"
-              image="/ngforecast.webp"
-              href="https://ngforecastapp.herokuapp.com"
-              id="ngforecast"
-            >
-              Lorem ipsum edfsdfsdfsdfsdf
-            </Work>
-          </Section>
-
-          <Section delay={0}>
-            <Work
-              title="ngForecast"
-              image="/ngforecast.webp"
-              href="https://ngforecastapp.herokuapp.com"
-              id="ngforecast"
-            >
-              Lorem ipsum edfsdfsdfsdfsdf
-            </Work>
-          </Section>
-
-          <Section delay={0}>
-            <Work
-              title="ngForecast"
-              image="/ngforecast.webp"
-              href="https://ngforecastapp.herokuapp.com"
-              id="ngforecast"
-            >
-              Lorem ipsum edfsdfsdfsdfsdf
+              Simple SPA web-site, for search weather forecast.
             </Work>
           </Section>
         </SimpleGrid>

@@ -40,7 +40,6 @@ export default function NavBar(props) {
             as="h1"
             size="md"
             variant="logo-title"
-            // letterSpacing="tighter"
           >
             <Link p={4} href="/">
               Egor ES
@@ -65,8 +64,7 @@ export default function NavBar(props) {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/esk98"
-            path={path}
+            href="https://github.com/esk-dev"
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
