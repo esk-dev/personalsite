@@ -16,7 +16,7 @@ export default function Works() {
             <Work
               title="ngForecast"
               image="/ngimage.webp"
-              href="https://github.com/esk-dev/personalsite"
+              href="https://github.com/esk-dev/ngforecast"
               id="ngforecast"
             >
               Simple SPA web-site, for search weather forecast.

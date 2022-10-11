@@ -9,12 +9,11 @@ import {
   Badge,
   ListItem,
   Container,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 const WorkPage = ({ children, title, href, text, stack, feature }) => {
-  //   const { title, href, text, stack, feature } = props;
-  // const listtechnologies = technologies?.map((el) => <li key={el}>{el}</li>);
-
+  const color = useColorModeValue("cyan.800", "cyan.200");
   const stackEL = stack.map((item) => {
     return (
       <Badge mr={1} colorScheme="cyan" key={item}>
@@ -47,7 +46,7 @@ const WorkPage = ({ children, title, href, text, stack, feature }) => {
                 <Badge mr={3} colorScheme="green">
                   WebSite
                 </Badge>
-                <Link color="cyan.600" href={href}>
+                <Link color={color} href={href}>
                   {href}
                 </Link>
               </ListItem>

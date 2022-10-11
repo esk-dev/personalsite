@@ -53,12 +53,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <p>Frontend web-developer</p>
-              <p>JavaScript / Html / CSS / Angular</p>
+              <p>JavaScript / Angular</p>
               <Button
                 onClick={onOpen}
                 mt={1}
-                variant="outline"
-                colorScheme="blue"
+                colorScheme="cyan"
                 leftIcon={<EmailIcon />}
               >
                 Contact
@@ -70,8 +69,8 @@ export default function Home() {
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
-            h="100px"
+            mw="100px"
+            mh="100px"
             display="inline-block"
             borderRadius="full"
             overflow="hidden"
@@ -105,8 +104,7 @@ export default function Home() {
             <Button
               onClick={() => router.push("/works")}
               rightIcon={<ArrowRightIcon />}
-              variant="outline"
-              colorScheme="blue"
+              colorScheme="cyan"
             >
               My portfolio
             </Button>
@@ -123,42 +121,30 @@ export default function Home() {
             flexDirection="column"
             justifyContent="space-between"
           >
-            <ListItem>
+            <ListItem mb="5px">
               <Link href="https://github.com/esk-dev" target="_blank">
-                <Badge color="cyan.600">
+                <Badge colorScheme="cyan" fontSize="18px">
                   GitHub <ExternalLinkIcon />
                 </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                color="cyan.600"
-                href="https://clck.ru/32KKZs"
-                target="_blank"
-              >
-                <Badge color="cyan.600">
+            <ListItem mb="5px">
+              <Link href="https://clck.ru/32KKZs" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
                   HeadHunter <ExternalLinkIcon />
                 </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                color="cyan.600"
-                href="https://career.habr.com/egoresk"
-                target="_blank"
-              >
-                <Badge color="cyan.600">
+            <ListItem mb="5px">
+              <Link href="https://career.habr.com/egoresk" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
                   HabrCareer <ExternalLinkIcon />
                 </Badge>
               </Link>
             </ListItem>
-            <ListItem>
-              <Link
-                color="cyan.600"
-                href="https://t.me/tgreddyay"
-                target="_blank"
-              >
-                <Badge color="cyan.600">
+            <ListItem mb="5px">
+              <Link href="https://t.me/tgreddyay" target="_blank">
+                <Badge colorScheme="cyan" fontSize="18px">
                   Telegram <ExternalLinkIcon />
                 </Badge>
               </Link>

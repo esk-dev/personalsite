@@ -5,13 +5,13 @@ import Head from "next/head";
 
 const Layout = ({ children, router }) => {
   return (
-    <Box minH="100%" as="Main">
+    <Box as="Main">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Egor Sk - Homepage </title>
+        <title>Egor&apos;s - Homepage </title>
       </Head>
       <NavBar path={router.asPath} />
-      <Container minH="100%" maxW="container.md" pt={14}>
+      <Container maxW="container.md" pt={14}>
         {children}
         <Footer />
       </Container>

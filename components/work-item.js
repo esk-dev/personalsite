@@ -27,13 +27,7 @@ export const Work = ({ children, title, image, href, id }) => {
       </Link>
 
       <Link href={href} target="_blank">
-        <Button
-          mt={2}
-          size="md"
-          leftIcon={<IoLogoGithub />}
-          variant="outline"
-          colorScheme="blue"
-        >
+        <Button mt={2} size="md" leftIcon={<IoLogoGithub />} colorScheme="cyan">
           Source
         </Button>
       </Link>
