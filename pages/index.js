@@ -4,24 +4,27 @@ import {
   Heading,
   chakra,
   Button,
+  Link,
   List,
   ListItem,
   useDisclosure,
-} from '@chakra-ui/react';
-import { ArrowRightIcon, EmailIcon } from '@chakra-ui/icons';
-import Link from 'next/link';
-import Image from 'next/image';
-import Page from '../components/page';
-import Section from '../components/section';
-import MotionBox from '../components/motionbox';
-import Paragraph from '../components/paragraph';
-import ModalFormDialog from '../components/modalformdialog';
+  Badge,
+} from "@chakra-ui/react";
+import { ArrowRightIcon, EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import Page from "../components/page";
+import Section from "../components/section";
+import MotionBox from "../components/motionbox";
+import Paragraph from "../components/paragraph";
+import ModalFormDialog from "../components/modalformdialog";
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
+  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
 export default function Home() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const router = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Page>
       <Container>
@@ -99,22 +102,15 @@ export default function Home() {
             the creation of a landing using Angular Material.
           </Paragraph>
           <Box align="center" my={6}>
-            <Link href="/works" passHref scroll={false}>
-              <Button
-                rightIcon={<ArrowRightIcon />}
-                variant="outline"
-                colorScheme="blue"
-              >
-                My portfolio
-              </Button>
-            </Link>
+            <Button
+              onClick={() => router.push("/works")}
+              rightIcon={<ArrowRightIcon />}
+              variant="outline"
+              colorScheme="blue"
+            >
+              My portfolio
+            </Button>
           </Box>
-        </Section>
-
-        <Section delay={0.3}>
-          <Heading as="h3" variant="section-title">
-            Bio
-          </Heading>
         </Section>
 
         <Section delay={0.3}>
@@ -122,49 +118,49 @@ export default function Home() {
             Get in touch
           </Heading>
 
-          <List>
+          <List
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+          >
             <ListItem>
-              <Link
-                href="https://github.com/esk98"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  Github
-                </Button>
+              <Link href="https://github.com/esk-dev" target="_blank">
+                <Badge color="cyan.600">
+                  GitHub <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https://career.habr.com/egorsk12"
+                color="cyan.600"
+                href="https://clck.ru/32KKZs"
                 target="_blank"
-                rel="noreferrer"
               >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  HabrCareer
-                </Button>
+                <Badge color="cyan.600">
+                  HeadHunter <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https://career.habr.com/egorsk12"
+                color="cyan.600"
+                href="https://career.habr.com/egoresk"
                 target="_blank"
-                rel="noreferrer"
               >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  HeadHunter
-                </Button>
+                <Badge color="cyan.600">
+                  HabrCareer <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
             <ListItem>
               <Link
-                href="https:t.me/tgreddyay"
+                color="cyan.600"
+                href="https://t.me/tgreddyay"
                 target="_blank"
-                rel="noreferrer"
               >
-                <Button size="md" variant="ghost" colorScheme="blue">
-                  Telegram
-                </Button>
+                <Badge color="cyan.600">
+                  Telegram <ExternalLinkIcon />
+                </Badge>
               </Link>
             </ListItem>
           </List>
