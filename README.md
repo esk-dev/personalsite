@@ -1,1 +1,6 @@
-This is a personal web site based on Next.js & Chakra UI.
+### Personal web site based on Next.js & Chakra UI.
+Использовано: 
+- Next JS
+- Chakra UI 
+- Formik
+- Netlify
