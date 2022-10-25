@@ -22,6 +22,26 @@ export default function Works() {
               Simple SPA web-site, for search weather forecast.
             </Work>
           </Section>
+          <Section delay={1}>
+            <Work
+              title="Test Case"
+              image="/ngimage.webp"
+              href="https://github.com/esk-dev/Test-Case"
+              id="test-case"
+            >
+              Test task for one of the vacancies for get a job
+            </Work>
+          </Section>
+          <Section delay={2}>
+            <Work
+              title="Personal Site"
+              image="/react.webp"
+              href="https://github.com/esk-dev/profilesite"
+              id="personal-site"
+            >
+              First personal site/First acquaintance with react
+            </Work>
+          </Section>
         </SimpleGrid>
       </Container>
     </Page>

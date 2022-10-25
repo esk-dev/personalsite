@@ -13,10 +13,16 @@ import { IoLogoGithub } from "react-icons/io5";
 export const Work = ({ children, title, image, href, id }) => {
   const Color = useColorModeValue("blackAlpha", "blue");
   return (
-    <Box w="100%" textAlign="center">
+    <Box w="100%" h="100%" justifyContent="space-between" textAlign="center">
       <Link href={`/works/${id}`} scroll={false}>
         <LinkBox cursor="pointer">
-          <Image borderRadius={12} src={image} alt={title} load="lazy" />
+          <Image
+            borderRadius={12}
+            src={image}
+            width="100%"
+            alt={title}
+            load="lazy"
+          />
           <LinkOverlay href={`/works/${id}`}>
             <Text mt={2} fontSize={20}>
               {title}

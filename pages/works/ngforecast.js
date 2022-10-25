@@ -14,9 +14,10 @@ export default function Ngforecast() {
       <Image
         borderRadius="lg"
         w="full"
-        src="/ngforecast.webp"
+        src="/ngforecast/ngforecast.webp"
         alt="ngforecast-screenshots"
         loading="lazy"
+        mb="10"
       />
     </WorkPage>
   );
