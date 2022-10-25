@@ -9,18 +9,20 @@ import {
   ListItem,
   useDisclosure,
   Badge,
+  Image,
 } from "@chakra-ui/react";
 import { ArrowRightIcon, EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-import Image from "next/image";
+// import Image from "next/image";
 import Page from "../components/page";
 import Section from "../components/section";
 import MotionBox from "../components/motionbox";
 import Paragraph from "../components/paragraph";
 import ModalFormDialog from "../components/modalformdialog";
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
-});
+// const ProfileImage = chakra(Image, {
+//   shouldForwardProp: (prop) =>
+//     ["width", "height", "src", "alt", "borderRadius"].includes(prop),
+// });
 
 export default function Home() {
   const router = useRouter();
@@ -32,7 +34,12 @@ export default function Home() {
           Hello, I&apos;m junior web developer!
         </Box>
 
-        <Box tabIndex={-1} display="flex" alignItems="center">
+        <Box
+          tabIndex={-1}
+          display="flex"
+          flexDirection={["column-reverse", "row", "row"]}
+          alignItems={["stretch", "center", "center"]}
+        >
           <Box
             display="flex"
             alignItems="flex-start"
@@ -45,7 +52,7 @@ export default function Home() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              <Heading as="h2">Egor Skorokhodov</Heading>
+              <Heading as="h3">Egor Skorokhodov</Heading>
             </MotionBox>
             <MotionBox
               initial={{ x: -15, opacity: 0 }}
@@ -66,21 +73,20 @@ export default function Home() {
           </Box>
           <ModalFormDialog isOpen={isOpen} onClose={onClose} />
           <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            mw="100px"
-            mh="100px"
-            display="inline-block"
-            borderRadius="full"
+            minW="100px"
             overflow="hidden"
+            borderRadius="full"
+            borderWidth="2px"
+            boerderStyle="solid"
+            borderColor="white"
+            boxSize="100px"
+            mH="100px"
           >
-            <ProfileImage
+            <Image
+              objectFit="cover"
               src="/profilepic.jpg"
               alt="Profile image"
-              borderRadius="full"
               width="100%"
-              height="100%"
             />
           </Box>
         </Box>
