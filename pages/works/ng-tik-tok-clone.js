@@ -1,5 +1,4 @@
 import WorkPage from "../../components/workpage";
-import { Image } from "@chakra-ui/react";
 
 export default function Ngforecast() {
   const text =
@@ -11,14 +10,6 @@ export default function Ngforecast() {
       text={text}
       stack={["Angular", "Angular Material", "RxJS", "Routing", "API"]}
     >
-      {/* <Image
-        borderRadius="lg"
-        w="full"
-        src="/ngforecast/ngforecast.webp"
-        alt="ngforecast-screenshots"
-        loading="lazy"
-        mb="10"
-      /> */}
     </WorkPage>
   );
 }

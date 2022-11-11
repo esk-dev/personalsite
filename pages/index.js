@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   Heading,
-  chakra,
   Button,
   Link,
   List,
@@ -13,16 +12,11 @@ import {
 } from "@chakra-ui/react";
 import { ArrowRightIcon, EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-// import Image from "next/image";
 import Page from "../components/page";
 import Section from "../components/section";
 import MotionBox from "../components/motionbox";
 import Paragraph from "../components/paragraph";
 import ModalFormDialog from "../components/modalformdialog";
-// const ProfileImage = chakra(Image, {
-//   shouldForwardProp: (prop) =>
-//     ["width", "height", "src", "alt", "borderRadius"].includes(prop),
-// });
 
 export default function Home() {
   const router = useRouter();
