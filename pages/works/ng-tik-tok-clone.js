@@ -7,9 +7,9 @@ export default function Ngforecast() {
   return (
     <WorkPage
       title="Ng-Tik-Tok-Clone"
-      href="#"
+      href=""
       text={text}
-      stack={["Angular", "Angular Material", "RxJS", "Routing", "HttpsModule"]}
+      stack={["Angular", "Angular Material", "RxJS", "Routing", "API"]}
     >
       {/* <Image
         borderRadius="lg"
