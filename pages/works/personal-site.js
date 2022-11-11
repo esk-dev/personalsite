@@ -3,7 +3,7 @@ import { Image } from "@chakra-ui/react";
 
 export default function PersonalSite() {
   const text =
-    "A site with animations made using React and a form for sending data, the backend for sending is not connected.";
+    "Сайт с анимацией сделанной с помощью React и формой для отправки данных, бэкенд для отправки не подключен.";
   return (
     <WorkPage
       title="Personal Site"

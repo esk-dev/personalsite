@@ -28,7 +28,7 @@ const WorkPage = ({ children, title, href, text, stack, feature }) => {
         <Section delay={0.1}>
           <Link href="/works">
             <Heading as="h3" variant="section-title">
-              Works
+              Работы
             </Heading>
           </Link>
           <Heading as="h4" variant="work-title">

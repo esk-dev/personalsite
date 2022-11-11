@@ -31,7 +31,7 @@ export default function Home() {
     <Page>
       <Container>
         <Box mb={6} p={3} textAlign="center">
-          Hello, I&apos;m junior web developer!
+          Привет, я - Junior Frontend Developer!
         </Box>
 
         <Box
@@ -52,7 +52,7 @@ export default function Home() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              <Heading as="h3">Egor Skorokhodov</Heading>
+              <Heading as="h3">Егор Скороходов</Heading>
             </MotionBox>
             <MotionBox
               initial={{ x: -15, opacity: 0 }}
@@ -67,7 +67,7 @@ export default function Home() {
                 colorScheme="cyan"
                 leftIcon={<EmailIcon />}
               >
-                Contact
+                Написать
               </Button>
             </MotionBox>
           </Box>
@@ -93,18 +93,16 @@ export default function Home() {
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
-            Work
+            О работе
           </Heading>
           <Paragraph>
-            My interest in web development started in 2021 when I decided try to
-            make the site as a final project - creating several pages taught me
-            a lot about HTML and CSS! I also found out that JS has more serious
-            possibilities than page animation. So I started learning web
-            development. Fast forward to today, I had the experience of an
-            internship in the department web development at Yota, where I got
-            acquainted with the framework Angular and more seriously delved into
-            the creation of the web. From projects made there, I can highlight
-            the creation of a landing using Angular Material.
+            Мотивированный и увлеченный разработчик интерфейсов в начале пути. Я
+            верю в силу кода и его способность изменить мир к лучшему. Всегда
+            стремлюсь совершенствовать свои навыки, изучать новые технологии,
+            для того чтобы создавать более совершенный код и приложения,
+            привлекающие пользователей. Как разработчик интерфейсов, я способен
+            долго и упорно совершенствовать свой код, исправлять и улучшать UX,
+            фиксить баги, находить решение поставленных задач.
           </Paragraph>
           <Box align="center" my={6}>
             <Button
@@ -112,14 +110,14 @@ export default function Home() {
               rightIcon={<ArrowRightIcon />}
               colorScheme="cyan"
             >
-              My portfolio
+              Мои работы
             </Button>
           </Box>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Get in touch
+            Контакты
           </Heading>
 
           <List
