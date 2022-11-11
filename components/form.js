@@ -5,7 +5,7 @@ import {
   Textarea,
   FormErrorMessage,
 } from "@chakra-ui/react";
-import { useToast } from '@chakra-ui/toast'
+import { useToast } from "@chakra-ui/toast";
 import { Formik, Field, useField, Form } from "formik";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import * as Yup from "yup";
@@ -31,19 +31,17 @@ const ModalForm = forwardRef((props, ref) => {
   const successToast = (title) => {
     id.current = toast({
       title: title,
-      status: 'success',
+      status: "success",
       isClosable: true,
     });
   };
 
   const errorToast = (title) => {
-    toast.update(
-      id.current, {
-        title: title,
-        status: 'error',
-      }
-    )
-  }
+    toast.update(id.current, {
+      title: title,
+      status: "error",
+    });
+  };
 
   async function postForm(values, actions) {
     await fetch("/api/postdata", {
@@ -95,13 +93,13 @@ const ModalForm = forwardRef((props, ref) => {
     >
       {(formik) => (
         <Form onSubmit={formik.handleSubmit}>
-          <FormField label="Name" name="name" />
+          <FormField label="Имя" name="name" />
           <FormField label="Email" name="email" type="email" />
-          <FormField label="Or another contacts" name="contacts" />
+          <FormField label="Или другие контакты" name="contacts" />
           <FormControl
             isInvalid={formik.errors.message && formik.touched.message}
           >
-            <FormLabel>Message</FormLabel>
+            <FormLabel>Сообщение</FormLabel>
             <Textarea
               {...formik.getFieldProps("message")}
               resize="none"

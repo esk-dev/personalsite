@@ -8,7 +8,7 @@ export default function Works() {
     <Page title="Works">
       <Container>
         <Heading variant="section-title" as="h2">
-          Works
+          Работы
         </Heading>
 
         <SimpleGrid columns={[1, 1, 2]} rowGap={5} columnGap={5}>
@@ -19,7 +19,7 @@ export default function Works() {
               href="https://github.com/esk-dev/ngforecast"
               id="ngforecast"
             >
-              Simple SPA web-site, for search weather forecast.
+              SPA для поиска прогноза погоды.
             </Work>
           </Section>
           <Section delay={1}>
@@ -29,7 +29,7 @@ export default function Works() {
               href="https://github.com/esk-dev/Test-Case"
               id="test-case"
             >
-              Test task for one of the vacancies for get a job
+              Тестовое задание к одной из вакансий
             </Work>
           </Section>
           <Section delay={2}>
@@ -39,7 +39,17 @@ export default function Works() {
               href="https://github.com/esk-dev/profilesite"
               id="personal-site"
             >
-              First personal site/First acquaintance with react
+              Пробный песональный сайт.
+            </Work>
+          </Section>
+          <Section delay={2}>
+            <Work
+              title="Tik Tok Clone"
+              image="/ngimage.webp"
+              href="https://github.com/esk-dev/ng-tik-tok-clone"
+              id="ng-tik-tok-clone"
+            >
+              Слайдер с видео.
             </Work>
           </Section>
         </SimpleGrid>

@@ -17,21 +17,23 @@ export default function ModalFormDialog(props) {
 
   const handleSubmit = () => {
     formRef.current.triggerSubmit();
-  }
+  };
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Contact me</ModalHeader>
+        <ModalHeader>Напишите мне</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <ModalForm ref={formRef}/>
+          <ModalForm ref={formRef} />
         </ModalBody>
         <ModalFooter>
           <Button colorScheme="blue" variant="ghost" mr={3} onClick={onClose}>
-            Close
+            Закрыть
           </Button>
-          <Button colorScheme="blue" onClick={handleSubmit} >Send</Button>
+          <Button colorScheme="blue" onClick={handleSubmit}>
+            Отправить
+          </Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

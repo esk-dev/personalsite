@@ -36,11 +36,7 @@ export default function NavBar(props) {
         justifyContent="space-between"
       >
         <Flex alignContent="center" alignItems="center">
-          <Heading
-            as="h1"
-            size="md"
-            variant="logo-title"
-          >
+          <Heading as="h1" size="md" variant="logo-title">
             <Link p={4} href="/">
               Egor ES
             </Link>
@@ -57,10 +53,10 @@ export default function NavBar(props) {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            Работы
           </LinkItem>
-          <LinkItem href="/resume.pdf" target="_blank" rel="noreferrer">
-            Resume
+          <LinkItem href="/CV.pdf" target="_blank" rel="noreferrer">
+            CV
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -87,13 +83,13 @@ export default function NavBar(props) {
               />
               <MenuList>
                 <Link href="/">
-                  <MenuItem as={Link}>Home</MenuItem>
+                  <MenuItem as={Link}>Главная</MenuItem>
                 </Link>
                 <Link href="/works">
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem as={Link}>Работы</MenuItem>
                 </Link>
-                <Link href="/resume.pdf" target="_blank" rel="noreferrer">
-                  <MenuItem as={Link}>Resume</MenuItem>
+                <Link href="/CV.pdf" target="_blank" rel="noreferrer">
+                  <MenuItem as={Link}>CV</MenuItem>
                 </Link>
               </MenuList>
             </Menu>

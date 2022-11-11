@@ -3,7 +3,7 @@ import { Image } from "@chakra-ui/react";
 
 export default function TestCase() {
   const text =
-    "The application displays a list of users and other data using requests to the API. In the application, you can delete a user, open a user card, change his data using a form.";
+    "Приложение отображает список пользователей и другие данные с помощью запросов к API. В приложении можно удалить пользователя, открыть карточку пользователя, изменить его данные с помощью формы.";
   return (
     <WorkPage
       title="Test Case"
@@ -14,9 +14,8 @@ export default function TestCase() {
         "Angular Material",
         "RxJS",
         "Routing",
-        "HttpsModule",
-        "CRUD",
-        "ReactiveFormsModule",
+        "ReactiveForms",
+        "API",
       ]}
     >
       <Image
