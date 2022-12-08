@@ -32,7 +32,7 @@ export default function Works() {
               Тестовое задание к одной из вакансий
             </Work>
           </Section>
-          <Section delay={2}>
+          {/* <Section delay={2}>
             <Work
               title="Personal Site"
               image="/react.webp"
@@ -41,7 +41,7 @@ export default function Works() {
             >
               Пробный песональный сайт.
             </Work>
-          </Section>
+          </Section> */}
           <Section delay={2}>
             <Work
               title="Tik Tok Clone"
