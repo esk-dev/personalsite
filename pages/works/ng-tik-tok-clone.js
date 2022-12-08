@@ -6,10 +6,9 @@ export default function Ngforecast() {
   return (
     <WorkPage
       title="Ng-Tik-Tok-Clone"
-      href=""
+      href="https://github.com/esk-dev/ng-tik-tok-clone"
       text={text}
       stack={["Angular", "Angular Material", "RxJS", "Routing", "API"]}
-    >
-    </WorkPage>
+    ></WorkPage>
   );
 }
