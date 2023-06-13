@@ -1,6 +1,9 @@
 const TelegramBot = require("node-telegram-bot-api");
-const token = "5620824479:AAENDhMczntLlBIeXmye2YM9s-py-Zr-Lhc";
-const chatId = "@mntfyofjob";
+const process = require("process");
+
+const token = process.env.TG_KEY;
+const chatId = process.env.TG_CHAT_ID;
+
 const bot = new TelegramBot(token, {
   polling: false,
 });
